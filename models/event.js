@@ -22,6 +22,18 @@ const eventSchema = new mongoose.Schema({
     ref: 'NGO',
     required: true,
   },
+  donationTotal: {
+    type: Number,
+  },
+  donationGoal: {
+    type: Number,
+  },
+  donors: [
+    {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: 'Individual',
+    }
+  ]
 });
 
 const Event = mongoose.model('Event', eventSchema);

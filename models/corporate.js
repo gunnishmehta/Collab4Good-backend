@@ -1,5 +1,3 @@
-import mongoose from 'mongoose';
-
 const corporateSchema = new mongoose.Schema({
   companyName: {
     type: String,
@@ -14,9 +12,16 @@ const corporateSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
-  // Add more fields as needed
+  donatedTo: [
+    {
+      event: {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'Event',
+      },
+      amount: {
+        type: Number,
+        required: true,
+      }
+    }
+  ]
 });
-
-const Corporate = mongoose.model('Corporate', corporateSchema);
-
-module.exports = Corporate;

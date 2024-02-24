@@ -28,3 +28,10 @@ export const updateEvent = async (req, res) => {
     await Event.findByIdAndUpdate(id, updatedEvent, { new: true });
     res.json(updatedEvent);
 }
+
+export const getEvent = async (req, res) => {
+    const { id } = req.params;
+    if (!mongoose.Types.ObjectId.isValid(id)) return res.status(404).send(`No event with id: ${id}`);
+    const event = await Event.findById(id);
+    res.json(event);
+}
