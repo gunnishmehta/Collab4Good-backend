@@ -16,7 +16,7 @@ export const createEvent = async (req, res) => {
         await newEvent.save();
         res.status(201).json(newEvent);
     } catch (error) {
-        res.status(409).json({ message: error.message });
+        res.status(500).json({ message: error.message });
     }
 }
 

@@ -1,0 +1,1 @@
+import corporate from "../models/corporate.js";
