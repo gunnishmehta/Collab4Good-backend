@@ -1,0 +1,10 @@
+import express from 'express';
+import auth from './auth.js';
+import dashboard from './dashboard.js'
+
+const router = express.Router();
+
+router.use('/auth', auth);
+router.use('/dashboard',dashboard);
+
+export default router;
