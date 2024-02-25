@@ -1,4 +1,4 @@
-import NGO from "../models/NGO.js"; // Import the NGO model
+import {NGO} from "../models/NGO.js"; // Import the NGO model
 import mongoose from "mongoose"; // Import mongoose
 
 export const getAllNGO = async (req, res) => {
