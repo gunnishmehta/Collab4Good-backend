@@ -1,3 +1,5 @@
+import mongoose, {Schema} from 'mongoose'
+
 const corporateSchema = new mongoose.Schema({
   companyName: {
     type: String,
@@ -20,8 +22,9 @@ const corporateSchema = new mongoose.Schema({
       },
       amount: {
         type: Number,
-        required: true,
       }
     }
   ]
 });
+
+export const Corporate = mongoose.model('Corporate', corporateSchema)

@@ -1,8 +1,8 @@
-import Events from '../models/event.js';
+import {Event} from '../models/event.js';
 
-export const getAllEvents = async (req, res) => {
+export const getAllEvent = async (req, res) => {
     try {
-        const events = await Events.find();
+        const events = await Event.find();
         res.status(200).json(events);
     } catch (error) {
         res.status(500).json({ message: error.message });

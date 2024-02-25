@@ -1,17 +1,24 @@
 import mongoose from "mongoose";
 
 const ngoSchema = new mongoose.Schema({
-  name: {
+  organizationName: {
     type: String,
     required: true,
   },
-  description: {
+  email: {
+    type: String,
+    required: true,
+  },
+  password: {
+    type: String,
+    required: true
+  },
+  missionStatement: {
     type: String,
     required: true,
   },
   location: {
     type: String,
-    required: true,
   },
   events: [{
     type: mongoose.Schema.Types.ObjectId,
@@ -19,6 +26,6 @@ const ngoSchema = new mongoose.Schema({
   }],
 });
 
-const NGO = mongoose.model('NGO', ngoSchema);
+export const NGO = mongoose.model('NGO', ngoSchema);
 
-module.exports = NGO;
+

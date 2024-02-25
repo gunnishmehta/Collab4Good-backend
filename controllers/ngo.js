@@ -1,4 +1,4 @@
-import ngo from "../models/NGO.js";
+import {NGO} from "../models/NGO.js";
 
 export const getAllNGO = async (req, res) => {
     try {

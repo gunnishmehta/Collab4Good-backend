@@ -1,7 +1,7 @@
 import mongoose from 'mongoose';
 
 const individualSchema = new mongoose.Schema({
-  username: {
+  fullName: {
     type: String,
     required: true,
   },
@@ -14,9 +14,12 @@ const individualSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
+  ngosJoined:{
+    type: mongoose.Schema.Types.ObjectId,
+    ref: 'NGO'
+  }
   // Add more fields as needed
 });
 
-const Individual = mongoose.model('Individual', individualSchema);
+export const Individual = mongoose.model('Individual', individualSchema);
 
-module.exports = Individual;
