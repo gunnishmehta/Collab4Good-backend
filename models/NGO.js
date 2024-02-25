@@ -24,6 +24,9 @@ const ngoSchema = new mongoose.Schema({
     type: mongoose.Schema.Types.ObjectId,
     ref: 'Event',
   }],
+  razorpayId: {
+    type: String,
+  }
 });
 
 export const NGO = mongoose.model('NGO', ngoSchema);
