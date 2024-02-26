@@ -32,7 +32,7 @@ Clone the project
 Go to the project directory
 
 ```bash
-  cd my-project
+  cd Collab4Good-backend
 ```
 
 Install dependencies
